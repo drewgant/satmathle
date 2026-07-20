@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAT Mathle | Admin Portal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#eef4fb;
+}
+
+header{
+
+background:#1d4ed8;
+color:white;
+padding:25px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+header h1{
+
+font-size:30px;
+
+}
+
+.container{
+
+max-width:1300px;
+margin:50px auto;
+padding:0 20px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+margin-bottom:18px;
+color:#0f172a;
+
+}
+
+.card p{
+
+margin-bottom:20px;
+color:#64748b;
+
+}
+
+button{
+
+padding:15px 28px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#1d4ed8;
+
+}
+
+.stats{
+
+margin-bottom:45px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
+}
+
+.stat{
+
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.stat h3{
+
+color:#64748b;
+margin-bottom:10px;
+
+}
+
+.stat h1{
+
+font-size:46px;
+color:#2563eb;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div style="display:flex;align-items:center;gap:20px;">
+
+    <img
+        src="/images/satmathle-logo.png"
+        alt="SAT Mathle Logo"
+        style="height:92px;">
+
+</div>
+
+<button onclick="location.href='dashboard.html'">
+
+Dashboard
+
+</button>
+
+</header>
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+
+<h3>
+
+Organizations
+
+</h3>
+
+<h1>
+
+12
+
+</h1>
+
+</div>
+
+<div class="stat">
+
+<h3>
+
+Published Mathles
+
+</h3>
+
+<h1>
+
+3
+
+</h1>
+
+</div>
+
+<div class="stat">
+
+<h3>
+
+Students Tested
+
+</h3>
+
+<h1>
+
+1,248
+
+</h1>
+
+</div>
+
+<div class="stat">
+
+<h3>
+
+PDF Resources
+
+</h3>
+
+<h1>
+
+36
+
+</h1>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>
+
+Create New Mathle
+
+</h2>
+
+<p>
+
+Build and publish this week's SAT Mathle.
+
+</p>
+
+<button>
+
+New Mathle
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+Question Bank
+
+</h2>
+
+<p>
+
+Manage SAT Math questions and answer keys.
+
+</p>
+
+<button>
+
+Questions
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+PDF Library
+
+</h2>
+
+<p>
+
+Upload and organize explanation PDFs.
+
+</p>
+
+<button>
+
+PDF Library
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+Organizations
+
+</h2>
+
+<p>
+
+Schools, districts and tutoring organizations.
+
+</p>
+
+<button>
+
+Organizations
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+Reports
+
+</h2>
+
+<p>
+
+View usage and performance analytics.
+
+</p>
+
+<button>
+
+Reports
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+Subscriptions
+
+</h2>
+
+<p>
+
+Manage customer licenses and billing.
+
+</p>
+
+<button>
+
+Billing
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

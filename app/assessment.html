@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAT Mathle | Assessment</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#0f172a;
+}
+
+header{
+background:#1d4ed8;
+color:white;
+padding:22px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:30px;
+font-weight:800;
+}
+
+#timer{
+font-size:24px;
+font-weight:800;
+}
+
+.container{
+max-width:950px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.card{
+background:white;
+padding:45px;
+border-radius:18px;
+box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.progressText{
+font-size:18px;
+font-weight:700;
+color:#2563eb;
+margin-bottom:20px;
+}
+
+.progressBar{
+display:flex;
+justify-content:space-between;
+margin-bottom:35px;
+}
+
+.step{
+width:34px;
+height:34px;
+border-radius:50%;
+background:#d1d5db;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+transition:.25s;
+}
+
+.step.current{
+background:#2563eb;
+color:white;
+}
+
+.step.completed{
+background:#16a34a;
+color:white;
+}
+
+#questionTitle{
+font-size:32px;
+margin-bottom:20px;
+}
+
+#questionText{
+font-size:22px;
+line-height:1.6;
+margin-bottom:35px;
+width:100%;
+}
+
+#questionText img{
+display:block;
+width:100%;
+max-width:900px;
+height:auto;
+margin:0 auto 30px auto;
+border:2px solid #d1d5db;
+border-radius:12px;
+}
+
+.answers{
+display:grid;
+gap:18px;
+margin-bottom:40px;
+}
+
+.answer{
+padding:18px;
+border:2px solid #dbe2ea;
+border-radius:12px;
+cursor:pointer;
+font-size:18px;
+transition:.25s;
+}
+
+.answer:hover{
+background:#eff6ff;
+border-color:#2563eb;
+}
+
+.answer.selected{
+background:#2563eb;
+color:white;
+border-color:#2563eb;
+}
+
+.buttons{
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+}
+
+button{
+padding:18px 34px;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+background:#2563eb;
+color:white;
+transition:.25s;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+button:disabled{
+background:#94a3b8;
+cursor:not-allowed;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div style="display:flex;align-items:center;gap:20px;">
+
+    <img
+        src="/images/satmathle-logo.png"
+        alt="SAT Mathle Logo"
+        style="height:90px;">
+
+</div>
+
+<div id="timer">
+06:00
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<div class="progressText" id="questionCounter">
+Question 1 of 10
+</div>
+
+<div class="progressBar">
+
+<div class="step current" id="step0">1</div>
+<div class="step" id="step1">2</div>
+<div class="step" id="step2">3</div>
+<div class="step" id="step3">4</div>
+<div class="step" id="step4">5</div>
+<div class="step" id="step5">6</div>
+<div class="step" id="step6">7</div>
+<div class="step" id="step7">8</div>
+<div class="step" id="step8">9</div>
+<div class="step" id="step9">10</div>
+
+</div>
+
+<h2 id="questionTitle">
+Loading...
+</h2>
+
+<div id="questionText">
+Loading Question...
+</div>
+
+<div id="answers" class="answers"></div>
+
+<div class="buttons">
+
+<button id="prevBtn">
+◀ Previous
+</button>
+
+<button id="nextBtn">
+Next ▶
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="assessment.js"></script>
+
+<script>
+
+let timeRemaining = 360;
+
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(() => {
+
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+
+    timer.textContent =
+        `${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+
+    timeRemaining--;
+
+    if(timeRemaining < 0){
+
+        clearInterval(countdown);
+
+        alert("Time has expired.");
+
+        window.location.href = "results.html";
+
+    }
+
+},1000);
+
+</script>
+
+</body>
+
+</html>
