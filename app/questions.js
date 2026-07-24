@@ -148,7 +148,7 @@ difficulty:6,
 
 pdf:"pdfs/domain-range-undefined.pdf",
 
-question:"What is the domain of the following function?\n\nf(x) = x^(-1/2) + 7",
+question:"Which of the following makes the function undefined?\n\nf(x) = x^(-1/2) + 7",
 
 choices:[
 "A) 7",
